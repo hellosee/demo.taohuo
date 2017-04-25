@@ -36,4 +36,14 @@ class MY_Controller extends CI_Controller {
             die('{"code":"2","msg":"nologin"}');
         }
     }
+
+    /**
+     * 返回limit语句
+     *
+     * @param  $pagesize 分页大小
+     * @param  $p 当前页码
+     */
+    public function get_limit($pagesize = 10, $p = 1) {
+        return ($p-1) * $pagesize;
+    }
 }

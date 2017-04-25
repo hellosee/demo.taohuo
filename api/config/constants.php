@@ -86,3 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 define('SECRET_KEY','DD8E0593B531478599A76CC42325F81E'); //加密参数
+define('PAGESIZE', 21);//默认分页大小

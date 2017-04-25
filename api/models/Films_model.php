@@ -20,5 +20,11 @@ class Films_model extends MY_Model {
         return $films;
     }
     
-    
+    public function getFilmDetail( $film_id ){
+        $fields = "film_id,film_name,film_desc,film_thumb,film_url,category AS category_id,film_source,film_views,film_zan,film_isvip";
+        $where = array('film_id'=>$film_id,'film_status'=>1);
+        $filmInfo = $this->getOne($fields,$where);
+        return $filmInfo;
+    }
+
 }

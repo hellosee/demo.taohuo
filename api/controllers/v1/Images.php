@@ -18,6 +18,7 @@ class Images extends MY_Controller {
         $imageLists = $this->images->getIndexImagesLists($category_id,PAGESIZE,$this->get_limit(PAGESIZE,$p));
         foreach($imageLists as $k => $imageList){
             $imageLists[$k]['image_thumb'] = $this->_remote_host.$imageList['image_thumb'];
+            $imageLists[$k]['image_num'] = $this->image_files->getImageFileCount($imageList['image_id']);
         }
         output(array('code'=>1,'msg'=>'success','data'=>$imageLists));
     }

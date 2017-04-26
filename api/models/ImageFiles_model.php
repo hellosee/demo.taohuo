@@ -19,4 +19,8 @@ class ImageFiles_model extends MY_Model {
         $images = $this->getData($fields,$where);
         return $images;
     }
+
+    public function getImageFileCount($image_id){
+        return $this->numRows(array('image_id'=>$image_id),'file_id');
+    }
 }

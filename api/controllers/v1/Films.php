@@ -35,6 +35,7 @@ class Films extends MY_Controller {
                 $snoopy->submit($url,$submit_vars);
                 $data = json_decode($snoopy->getResults(),1);
                 if(!$data['error']){
+                    $filmInfo['film_milliseconds'] = $data['play']['milliseconds_video'];
                     $filmInfo['film_play_url'] = 'http:'.$data['play']['urls'][0];
                 }
             }

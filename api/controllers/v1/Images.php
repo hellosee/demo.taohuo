@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Images extends MY_Controller {
 
-    private $_remote_host = "http://45.78.26.253:8081/";
+    private $_remote_host = "http://img.phpnote.com/";
 
     public function __construct(){
         parent::__construct();
